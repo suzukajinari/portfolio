@@ -80,7 +80,7 @@ nav ul a:hover::after {
   position: relative;
   height: 400px;
   margin-bottom: 10%;
-  background-image: url(/images/top-portfolio.png);
+  background-image: url(images/top-portfolio.png);
   background-repeat: no-repeat;
   background-position: 80% 0;
 }
