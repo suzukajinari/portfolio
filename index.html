@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>suzunari｜portfolio</title>
+<meta name="description" content="suzunariのポートフォリオサイトです。">
+<link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/drawer.css">
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+<!-- <script src="https://kit.fontawesome.com/e514ec5d29.js" crossorigin="anonymous"></script> -->
+<script src="/jquery-3.5.1.min.js"></script>
+<script src="/js/iscroll.js"></script>
+<script src="/js/drawer.min.js"></script>
+<script>
+  $(function() {
+    $('.drawer').drawer();
+
+    $('.drawer').on('drawer.opened', function() {
+      $('.drawer-menu a').on('click', function() {
+        $('.drawer').drawer('close');
+      });
+    });
+  });
+</script>
+<script>
+  $(function() {
+    var pagetop = $('#page_top');
+    pagetop.hide();
+    $(window).scroll(function(){
+      if ($(this).scrollTop() > 100 ) {
+        pagetop.fadeIn();
+      } else {
+        pagetop.fadeOut();
+      }
+    });
+
+    $('a[href^="#"]').click(function(){
+      var href = $(this).attr('href');
+      var target = $(href == "#" ? 'html' : href );
+      var distance = target.offset().top;
+
+      $('html,body').animate({ scrollTop:distance }, 1000, 'swing');
+      return false;
+    });
+  });
+</script>
+</head>
+<body class="drawer drawer--right">
+<button type="button" class="drawer-toggle drawer-hamburger">
+<span class="sr-only">toggle navigation</span>
+<span class="drawer-hamburger-icon"></span>
+</button>
+<div class="wrapper">
+
+<header>
+<div class="name">
+<p>suzunari</p>
+</div><!--/name-->
+
+<nav class="drawer-nav" role="navigation">
+<ul class="drawer-menu">
+<li><a href="#sec1">About</a></li>
+<li><a href="#sec3">Works | 自主制作</a></li>
+<li><a href="#sec4">Skill</a></li>
+<li><a href="#sec5">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<div class="top-wrap">
+<h1>PORTFOLIO WEBSITE<br><span>suzunari</span></h1>
+</div><!--/top-wrap-->
+
+<article>
+<section class="about-wrap" id="sec1">
+<h2>About<span>自己紹介</span></h2>
+<div class="flex">
+<p class="about-img"><img src="/images/my-photo.png" width="377" height="328" alt="suzunariの写真"></p>
+
+<p class="about-text">埼玉県在住の24歳です。<br>高校ではフードデザイン科を専攻し卒業と同時に調理師免許を取得しました。趣味は美味しいものを食べることと、音楽を聴くことです。<br>2020.8月〜2021.1月まで職業訓練校（Webデザイナー・ディレクター・マーケティング養成科）を受講しておりました。<br>コーディングが好きで、Web制作会社にUI開発者（フロントエンドエンジニア）として2021年10月まで在籍しておりました。</p>
+</div><!--/flex-->
+</section><!--/about-wrap-->
+
+<section class="works-wrap" id="sec3">
+<h2>Works<span>自主制作</span></h2>
+<div class="flex">
+
+<div class="works-item">
+<a href="https://suzukaji.com/magicom/" target="_blank">
+<div class="img-box">
+<img src="/images/works-magicom.png" width="338" height="237" alt="マジコム。架空革小物店のサイト">
+</div>
+
+<div class="hdg">
+<h3>magicom（マジコム）</h3>
+</div>
+<div class="dl-box">
+<dl>
+<div class="dl-inner">
+<dt>制作期間：</dt>
+<dd>1か月</dd>
+</div>
+<div class="dl-inner">
+<dt>言語：</dt>
+<dd>HTML、CSS、JavaScript</dd>
+</div>
+</dl>
+</div>
+</a>
+</div><!--/works-item-->
+
+<div class="works-item">
+<a href="https://suzukaji.com/sandwichday/" target="_blank">
+<p class="img-box"><img src="/images/works-sd.jpg" width="338" height="237" alt="架空サンドイッチ店のサイトSandwich Day"></p>
+<div class="hdg">
+<h3>Sandwich Day</h3>
+</div>
+<div class="dl-box">
+<dl>
+<div class="dl-inner">
+<dt>制作期間：</dt>
+<dd>2か月</dd>
+</div>
+<div class="dl-inner">
+<dt>言語：</dt>
+<dd>HTML、CSS、JavaScript</dd>
+</div>
+</dl>
+</div>
+</a>
+</div><!--/works-item-->
+
+<div class="works-item">
+<a href="https://suzukaji.com/pizzamax/" target="_blank">
+<p class="img-box"><img src="/images/works-pizzamax.png" width="338" height="237" alt="架空ピザ店のサイト（トップページのみ）Pizza max!"></p>
+<div class="hdg">
+<h3>Pizza max!</h3>
+</div>
+
+<div class="dl-box">
+<dl>
+<div class="dl-inner">
+<dt>制作期間：</dt>
+<dd>1日</dd>
+</div>
+<div class="dl-inner">
+<dt>言語：</dt>
+<dd>HTML、CSS、JavaScript</dd>
+</div>
+</dl>
+</div>
+</a>
+</div><!--/works-item-->
+
+<div class="works-item">
+<a href="https://suzukaji.com/newcard/" target="_blank">
+<p class="img-box"><img src="/images/works-js.png" width="338" height="237" alt="JavaScript（jQuery）を使ったアニメーション"></p>
+<div class="hdg">
+<h3>JavaScriptを使ったアニメーション</h3>
+</div>
+<div class="dl-box">
+<dl>
+<div class="dl-inner">
+<dt>制作期間：</dt>
+<dd>3時間</dd>
+</div>
+<div class="dl-inner">
+<dt>言語：</dt>
+<dd>HTML、CSS、JavaScript</dd>
+</div>
+</dl>
+</div>
+</a>
+</div><!--/works-item-->
+
+<div class="works-item">
+<a href="https://suzukaji.com/drink/" target="_blank">
+<p class="img-box"><img src="/images/works-php.png" width="338" height="237" alt="PHPを使ったドリンクアドバイザーゲーム"></p>
+<div class="hdg">
+<h3>ドリンクアドバイザーゲーム</h3>
+</div>
+<div class="dl-box">
+<dl>
+<div class="dl-inner">
+<dt>制作期間：</dt>
+<dd>2日</dd>
+</div>
+<div class="dl-inner">
+<dt>言語：</dt>
+<dd>HTML、CSS、JavaScript</dd>
+</div>
+</dl>
+</div>
+</a>
+</div><!--/works-item-->
+</div><!--/flex-->
+</section><!--/works-wrap-->
+
+<section class="skill-wrap" id="sec4">
+<h2>Skill<span>現在できること</span></h2>
+<div class="flex">
+<div class="skill-item">
+<div class="icon language"><img src="/images/icon-html.svg" width="55" height="50" alt="HTML5/CSS3"></div>
+<div class="skill-text">
+<h3>HTML5/CSS3</h3>
+<p>2段組/3段組サイト・レスポンシブサイト・フォーム作成など</p>
+</div><!--/skill-text-->
+</div><!--/skill-item-->
+
+<div class="skill-item">
+<div class="icon language"><i class="fab fa-js fa-4x"></i></div>
+<div class="skill-text">
+<h3>Javascript</h3>
+<p>jQueryを使用したマウスオーバーでの画像エフェクト、フェードイン/フェードアウトのスライドショーなど</p>
+</div><!--/skill-text-->
+</div><!--/skill-item-->
+
+<div class="skill-item">
+<div class="icon language"><i class="fab fa-php fa-4x icon-size"></i></div>
+<div class="skill-text">
+<h3>PHP</h3>
+<p>お問い合わせフォーム・ログインフォーム</p>
+</div><!--/skill-text-->
+</div><!--/skill-item-->
+
+<div class="skill-item">
+<div class="icon other"><i class="fab fa-wordpress fa-4x icon-size"></i></div>
+<div class="skill-text">
+<h3>Wordpress</h3>
+<p>システム導入・インターフェイスのカスタマイズ</p>
+</div><!--/skill-text-->
+</div><!--/skill-item-->
+
+<div class="skill-item">
+<div class="icon other"><img src="/images/icon-design.svg" width="55" height="50" alt="Webデザイン"></div>
+<div class="skill-text">
+<h3>Webデザイン</h3>
+<p>デザインの4大原則「近接」「整列」「反復」「対比」とコーディングのしやすさを意識したデザイン作りなど</p>
+</div><!--/skill-text-->
+</div><!--/skill-item-->
+
+<div class="skill-item">
+<div class="icon tool"><img src="/images/icon-xd.svg" width="55" height="50" alt="XD"></div>
+<div class="skill-text">
+<h3>XD</h3>
+<p>ページ遷移・画像の書き出し・共有リンク作成など</p>
+</div><!--/skill-text-->
+</div><!--/skill-item-->
+
+<div class="skill-item">
+<div class="icon tool"><img src="/images/icon-dreamweaver.svg" width="55" height="50" alt="Dreamweaver"></div>
+<div class="skill-text">
+<h3>Dreamweaver</h3>
+<p>テンプレートを使った作業・FTP機能を使ったアップロードなど</p>
+</div><!--/skill-text-->
+</div><!--/skill-item-->
+
+
+<div class="skill-item">
+<div class="icon tool"><img src="/images/icon-illustrator.svg" width="55" height="50" alt="Illustrator"></div>
+<div class="skill-text">
+<h3>Illustrator</h3>
+<p>オブジェクト作成・クリピングマスク・整列・テキストデザインなど</p>
+</div><!--/skill-text-->
+</div><!--/skill-item-->
+
+<div class="skill-item">
+<div class="icon tool"><img src="/images/icon-photoshop.svg" width="55" height="50" alt="Photoshop"></div>
+<div class="skill-text">
+<h3>Photoshop</h3>
+<p>サイズ変更・トリミング・色調補正・合成など</p>
+</div><!--/skill-text-->
+</div><!--/skill-item-->
+
+<div class="skill-item">
+<div class="icon office"><img src="/images/icon-word.svg" width="55" height="50" alt="Word"></div>
+<div class="skill-text">
+<h3>Word</h3>
+<p>日本商工会議所主催PC検定2級（文書作成）取得。<br>ビジネス文書作成、罫線機能、図形描画など</p>
+</div><!--/skill-text-->
+</div><!--/skill-item-->
+
+<div class="skill-item">
+<div class="icon office"><img src="/images/icon-excel.svg" width="55" height="50" alt="Excel"></div>
+<div class="skill-text">
+<h3>Excel</h3>
+<p>日本商工会議所主催PC検定2級（データ活用）取得。<br>関数・グラフ作成・データの管理・テーブルの作成など</p>
+</div><!--/skill-text-->
+</div><!--/skill-item-->
+
+<div class="skill-item">
+<div class="icon office"><img src="/images/icon-powerpoint.svg" width="55" height="50" alt="PowerPoint"></div>
+<div class="skill-text">
+<h3>PowerPoint</h3>
+<p>日本商工会議所主催PC検定2級（プレゼン資料作成）取得。<br>プレゼンテーション資料作成、SmartArtグラッフィク作成など</p>
+</div><!--/skill-text-->
+</div><!--/skill-item-->
+</div><!--/flex-->
+</section><!--/skill-wrap-->
+
+<section class="contact-wrap" id="sec5">
+<h2>Contact<span>お問い合わせ</span></h2>
+<div class="contact-item">
+<p>ご質問等お気軽にお問い合せください。</p>
+
+<div class="gmail">
+<p><img src="/images/apple-touch-icon.jpg" width="100" height="100" alt="gmailへのリンク"></p>
+<p><a href="mailto:suzukajinari@gmail.com">suzukajinari@gmail.com</a></p>
+</div><!--/gmail-->
+</div><!--/contact-item-->
+</section>
+</article>
+
+<footer>
+<p><small>&copy;2021 suzunari.</small></p>
+</footer>
+<div id="page_top"><a href="#"></a></div>
+</div><!--/wrapper-->
+</body></html>
